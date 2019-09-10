@@ -1,17 +1,327 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i,700i|Open+Sans:300,400,600,700,800|Raleway:400,500,600,700,800&display=swap" rel="stylesheet">
+<title> HW3</title>
+<style>
+
+/*=================================Page Config======================================*/
+
+body
+{
+  scroll-behavior: smooth;
+  overflow-x:hidden;
+  width:1250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper {
+	top:0;
+	perspective: 1px;
+	transform-style: preserve-3d;
+	height: 98vh;
+	margin-top: 0px;
+	overflow-x: hidden;
+	overflow-y: visible;
+	scrollbar-width:none;
+}
+/*============================Navigation Bar================================*/
+
+.navbar{
+	z-index: 999;
+	height:90px;
+	display: block;
+	top:0;
+	width:1250px;
+	align-self: center;
+	position:absolute;
+	background-color: white;
+	overflow:hidden;
+	margin-right: 50px;
+}
+
+.navbar a{
+	transform: translateX(-30px);
+	font-family:Raleway;
+	float: right;
+	position:relative;
+	color: black;
+	text-align: center;
+	margin-left:0px;
+	margin-right:37px;
+	top:0;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+p.migi{
+	font-family: Playfair Display, serif;
+	color:#4B1D81;
+	margin-top:30px;
+	margin-left:160px;
+	font-size: 25px;
+	width:1000px;
+}
+
+/*========================================Center Box======================================*/
+
+.centerbox{
+	line-height: 16.5px;
+	border: none;
+	overflow-y:hidden; 
+	background-color: white;
+	position: absolute;
+	width:600px;
+	height:335px;
+	margin-left: 330px;
+	margin-right: 370px;
+	color:#4B1D81;
+	transform: translate(0px,-600px);
+}
+
+.centerbox img{
+	background-size: none;
+	background-position: center;
+	width:180px;
+	max-height: 255px;
+	float: left;
+	padding-left:40px;
+	padding-right: 40px;
+	padding-top:50px;
+	padding-bottom: 50px;
+}
+
+.centerbox img{
+	float: left;
+	object-fit: cover;
+	height: 235px;
+	width:183px; 
+}
+
+hr.custom{
+	border-top: 5px solid indigo;
+	width:90px;
+	margin-left: 0;
+	margin-bottom: 50px;
+	margin-top: 40px;
+}
+
+/*==========================================Three Columns================================*/
+
+table.column{
+	font-family: Open Sans, sans serif;
+	width:100%;
+	height:780px;
+	padding:0px;
+	color: white;
+	margin: none;
+	border-collapse:collapse
+}
+
+th{
+	margin-left:200px;
+}
+
+/*==========================================Lorem Ipsum=================================*/
+
+.lorem{
+	background: #4B1D81;
+	width:100%;
+	height:650px;
+	text-align: left;
+	padding: 0px;
+	border-collapse: collapse;
+}
+.text{
+	width:100%; 
+	margin-left:5px; 
+	font-family:Raleway;
+	padding-top:190px; 
+	padding-left:155px; 
+	color:white
+}
+
+/*=====================================End Section===========================*/
+
+table.form{
+	background-color: white;
+	font-family: Raleway;
+	border:none;
+	width:100%;
+	height:580px;
+	padding-left:180px;
+	padding-right: 135px;
+	color: white;
+	margin: 0;
+}
+
+input{
+	padding-top: 3.5px;
+	padding-left: 15px;
+	width:430px;
+	height:26px;
+	margin-bottom: 6px;
+	border: 2.5px solid indigo;
+}
+input::placeholder{
+	opacity:1;
+	color:#4B1D81;
+	font-size: 15px;
+	font-weight: 400;
+	font-family: Raleway;
+}
+
+textarea{
+	margin-bottom: 5px;
+	border: 2.5px solid indigo;
+	resize: none;
+}
+
+textarea::placeholder{
+	opacity: 1;
+	color:#4B1D81;
+	font-size: 15px;
+	font-weight: 400;
+	font-family: Raleway;
+}
+
+
+.contact{
+	font-family:Raleway; 
+	font-size: 15px; 
+	color:#4B1D81; 
+	font-weight: 440;
+	line-height: 1.8em;
+}
+
+.button {
+	background-color: #4B1D81;
+	border: none;
+	color: white;
+	padding:8px 30px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 19px;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-family: Playfair Display, serif;
+}
+
+/*=========================================================Parallax=========================================*/
+
+.ParallaxContainer {
+	width: 105%;
+	position: relative;
+	z-index: -1;
+	height: 1200px;
+	top: -6% !important;
+	transform: translateZ(-0.5px) scale(1.5);
+	background: url(http://csci571.com/hw/hw3/images/coffee2.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.ParallaxContainer2 {
+	position: relative;
+	z-index: -1;
+	width:105%;
+	height: 1200px;
+	top: -35% !important;
+	transform: translateZ(-0.5px) scale(1.5);
+	background: url(http://csci571.com/hw/hw3/images/coffee1.jpg) no-repeat;
+	background-size:cover;
+	background-position: center;
+}
+
+.ContentContainer {
+	transform: translateY(-200px);
+	position: relative;
+	z-index: 1;
+}
+
+.ContentContainer2 {
+	transform: translateY(-850px);
+	position: relative;
+	display: block;
+	background-color: white;
+	z-index: 1;
+}
+
+</style>
 </head>
 
 <body>
+	<div class="navbar" style="position: fixed;">
+		<p class="migi"><i>Migi Bell</i>
+		<a href="abc.html" style="top:8px; font-family:Open Sans; font-weight:480;color:#A4A1A1; font-size:17px;">CONTACT ME</a>
+		<a href="abc.html" style="top:8px; font-family:Open Sans; font-weight:480;color:#A4A1A1; font-size:17px;">ABOUT ME</a>
+		<a href="abc.html" style="top:8px; font-family:Open Sans; font-weight:480;color:#A4A1A1; font-size:17px;">PORTFOLIO</a>
+		<a href="abc.html" style="top:8px; font-family:Open Sans; font-weight:480;color:#A4A1A1; font-size:17px;">HOME</a>
+		</p>
+	</div>
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+	<div class="wrapper">
+		<div class="ParallaxContainer"></div>
 
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Hello World! I’m aregunas. This is my website!</p>
+		<div class="ContentContainer">
+
+			<div class="centerbox">
+				<img class="crop" src="http://csci571.com/hw/hw3/images/face.jpg"><br><br><br>
+				<font size=4 style="font-family:Playfair Display; margin-top: 6px;">Migi Bell<br></font>
+				<font style="font-family:Raleway; font-size: 45px; line-height: 1em">FOOD<br></font>
+				<font style="font-family:Raleway; font-size:65px; font-weight: 700; letter-spacing:1px; line-height: 1em">STYLIST.</font>
+				<hr class="custom">
+				<font style="font-family:Raleway; font-size: 24px; font-weight: 400; letter-spacing: 2px; line-height:10px">PORTFOLIO></font>
+			</div>
+
+			<table class="column">
+				<tr>
+					<th style="background-color: #65A6D2; width:33.33%; border:none; text-align: left; padding-left: 65px; font-size: 20px;">PROJECTS<br></font>
+					<font style="font-size: 30px; line-height: 1.5em">PROJECTS></font></th>
+					<th style="background-color: #513893; width:33.33%; border:none; text-align: left; padding-left: 65px; font-size: 20px;">PROJECTS<br></font>
+					<font style="font-size: 30px; line-height: 1.5em">EDITORIAL></font></th>
+					<th style="background-color: #A367B3; width:33.33%; border:none; text-align: left; padding-left: 65px; font-size: 20px;">PROJECTS<br></font>
+					<font style="font-size: 30px; line-height: 1.5em">INNOVATIVE></font></th>
+				</tr>
+			</table>
+
+		</div>
+  
+  
+		<div class="ParallaxContainer2"></div>
+
+		<div class="ContentContainer2">
+			<div class="lorem">
+				<div class="text">
+				<font size=3><b>-Hello-</b></font><br><br>
+				<font size=14>Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit, sed do eiusmod tempor<br>incididunt ut labore et dolore magna aliqua.</font>
+				</div>
+			</div>
+
+			<table class="form">
+				<tr><th style=" width:50%; text-align: left;">
+					<div class="contact">
+						<b>-Get In Touch-</b><br><br>
+						<font size=24>Contact Me.</font><br>
+						<font weight=400>700 Morey Francois Street, San Francisco, CA 94148<br>
+						info@lorem.com | Tel: 123-555-1212<br><br><br><br><br><br>
+						&copy 2023 by Migi Bell.</font>
+					</div>
+				</th>
+				<th style="width:50%; text-align: right; margin-top: 10px;">
+					<form><br><br><br><br><br>
+						<input type="text" placeholder="Name"><br>
+						<input type="email" placeholder="Email"><br>
+						<input type="text" placeholder="Phone"><br>
+						<textarea style="height:100px; width:422px; padding: 12px;" placeholder="Type your message here..."></textarea><br>
+						<button class="button">Submit</button>
+					</form>
+				</th></tr>
+
+			</table>
+		</div>
+	</div>
+
 </body>
-</html>
